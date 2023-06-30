@@ -2,142 +2,68 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import {useState, useEffect} from 'react';
-import {signIn, signOut, useSession, getProviders} from 'next-auth/react';
-/*
+import { useState } from 'react';
 const Nav = () => {
-  const isUserLoggedIn = true;
-  const [providers, setProviders] = useState(null);
+  const [mobile, setMobile] = useState(false);
 
-  useEffect(() => {
-    const setProviders = async () => {
-      const response = await getProviders();
-
-      setProviders(response);
-    }
-  }, []);
+  const toggleMobile = () => {
+    setMobile(!mobile);
+  };
 
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
-        <Link href="/" className="flex gap-2 flex-center">
-            <Image 
-                src="/assets/images/logo.svg"
-                alt="Logo"
-                width={30}
-                height={30}
-                className="object-contain"
-            />
-            <p className="logo_text">
-                Promptopia
-            </p>
-        </Link>
-        <div className="sm:flex hidden">
-          {isUserLoggedIn ? (
-            <div className="flex gap-3 md:gap-5">
-              <Link href="/create-prompt"
-              className="black_btn"
-              >
-                Create Post
-              </Link>
-              <button type="button" onClick={signOut} className="outline_btn">
-                Sign Out
-              </button>
-              <Link href="/profile">
-                <Image
-                  src="/assets/images/logo.svg"
-                  width={37}
-                  height={37}
-                  className="rounded-fill"
-                  alt="profile picture"
-                >
-                </Image>
-              </Link>
-            </div>
-          ): (
-            <>
-            {providers && Object.values(providers).map((provider) => {
-              (
-                <button
-                type="button"
-                key={provider.name}
-                onClick={() => signIn(provider.in)}
-                className="black_btn"
-                >
-                  Sign In
-                </button>
-              )
-            })
-            }
-            </>
-          )}
-        </div>
-        <div className="sm:hidden flex relative">
-          {isUserLoggedIn ? (
-            <div className="flex">
-              <Image
-                src="/assets/images/logo.svg"
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-              />
-            </div>
-
-          ) : (
-            <>
-            {providers && Object.values(providers).map((provider) => {
-              (
-                <button
-                type="button"
-                key={provider.name}
-                onClick={() => signIn(provider.in)}
-                className="black_btn"
-                >
-                  Sign In
-                </button>
-              )
-            })
-            }
-            </>
-          )
-          }
-        </div>
-    </nav>
-  )
-}
-
-export default Nav
-*/
-
-
-//TODO: Contact Us Page
-const Nav = () => {
-  return (
-    <nav className="flex-between w-full mb-16 pt-2">
-      <div className="flex flex-row gap-4">
-        <Link href="/" className="flex gap-1 flex-center">
-            <Image 
-                src="/assets/images/logo.png"
-                alt="Logo"
-                width={60}
-                height={60}
-                className="object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ..."
-            />
-        </Link>
-        <Link href="/" className="flex-center text-1xl font-bold leading-[1.15] text-gray-600 hover:-translate-y-1 hover:text-black hover:scale-110 duration-300 delay-150">
+    <nav className="w-full top-0 rounded-xl sticky ">
+      <nav class="bg-white border-gray-200 dark:bg-gray-900 rounded-xl sticky">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 backdrop-filter z-50 rounded-xl background-blur-xl sticky">
+    <Link href="/" className="self-center">
+        <Image 
+            src="/assets/images/logo.png"
+            alt="Logo"
+            width={60}
+            height={60}
+            className="object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ..."
+        />
+    </Link>
+    <button onClick={toggleMobile} data-target="#navbar-default" data-toggle="collapse" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <Link href="/" className="flex-center pl-3 leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
           About Us
         </Link>
-        <Link href="/" className="flex-center text-1xl font-bold leading-[1.15] text-gray-600 hover:-translate-y-1 hover:text-black hover:scale-110 duration-300 delay-150">
+        <Link href="/" className="flex-center leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
           Previous Projects
         </Link>
-        <Link href="/" className="flex-center text-1xl font-bold leading-[1.15] text-gray-600 hover:-translate-y-1 hover:text-black hover:scale-110 duration-300 delay-150">
+        <Link href="/" className="flex-center leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
           Our Team
         </Link>
-      </div>
-      <div className="flex flex-row gap-4">
         <button className="black_btn">Contact Us</button>
         <button className="outline_btn">Join</button>
+      </ul>
+    </div>
+    { mobile && (
+      <div class="visible sm:invisible w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <Link href="/" className="pl-3 leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
+            About Us
+          </Link>
+          <Link href="/" className="pl-3 pt-5 leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
+            Previous Projects
+          </Link>
+          <Link href="/" className="pl-3 pt-5 leading-[1.15] hover:-translate-y-1 hover:text-blue-700 hover:scale-110 duration-300 delay-150">
+            Our Team
+          </Link>
+          <div className="visible sm:invisible mt-3 flex-center flex-col">
+            <button className="black_btn">Contact Us</button>
+            <button className="outline_btn mt-3">Join Us</button>
+          </div>
+        </ul>
       </div>
+      )
+    }
+  </div>
+</nav>
     </nav>
   )
 }
