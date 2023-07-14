@@ -1,9 +1,10 @@
 import '@styles/globals.css';
 import Nav from '@components/Nav';
+import Footer from '@components/Footer';
 
 export const metadata = {
-    metadata: "Promptopia",
-    description: "Discover & Share AI Prompts"
+    metadata: "Young Researchers Academy",
+    description: "Training the next generation of researchers"
 }
 
 const RootLayout = ({children}) => {
@@ -16,6 +17,7 @@ const RootLayout = ({children}) => {
             <main className="app">
                 <Nav />
                 {children}
+                <Footer />
             </main>
         </body>
     </html>

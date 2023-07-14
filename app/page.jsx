@@ -146,9 +146,6 @@ Some of our current work includes expanding the program to early high-schoolers 
         >
         </AnimatedNumber>
       </div>
-      <Footer>
-
-      </Footer>
     </section>
   )
 }

@@ -98,6 +98,11 @@
   @apply text-5xl font-extrabold leading-[1.15] text-black sm:text-5xl md:text-6xl lg:text-7xl lg:text-8xl;
 }
 
+.head_text_3 {
+  @apply text-4xl font-extrabold leading-[1.15] text-black sm:text-5xl md:text-6xl lg:text-6xl lg:text-6xl;
+}
+
+
 .head_text_2 {
   @apply text-3xl font-extrabold leading-[1.15] text-black lg:text-3xl;
 }
