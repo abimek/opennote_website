@@ -12,8 +12,8 @@ const Nav = () => {
 
   return (
     <nav className="w-full top-0 rounded-xl sticky ">
-      <nav class="bg-white border-gray-200 dark:bg-gray-900 rounded-xl sticky">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 backdrop-filter z-50 rounded-xl background-blur-xl sticky">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900 rounded-xl sticky">
+  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 backdrop-filter z-50 rounded-xl background-blur-xl sticky">
     <Link href="/" className="self-center">
         <Image 
             src="/assets/images/logo.png"
