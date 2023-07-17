@@ -18,7 +18,7 @@ const AnimatedNumber = ({n, text}) => {
 
   return (
     <Waypoint onEnter={() => setInview(true)}>
-      <div className="p-2 px-4 flex flex-col text-center border rounded-2xl drop-shadow-3xl border-green-700 shadow-green-70/50 inline-flex focus:ring-[#050708]/50">
+      <div className="p-2 px-4 flex flex-col text-center border rounded-2xl drop-shadow-3xl border-amber-700 shadow-green-70/50 inline-flex focus:ring-[#050708]/50">
         <p className="sm:text-6xl head_text_2">
           <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
         </p>

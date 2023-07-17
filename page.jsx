@@ -1,33 +1,28 @@
-'use client'
 import AnimatedNumber from '@components/AnimatedNumber';
-import Link from 'next/link';
 
 const Home = () => {
 
-
+  
 
   return (
-    <section className="w-full flex-center flex-col mt-16">
+    <section className="w-full flex-center flex-col pt-16">
       <h1 className="head_text text-center max-w-7xl">
-        <span className="orange_gradient text-center">Open Note AI</span>
+        <span className="green_gradient text-center">OpenNote AI</span>
       </h1>
       <p className="mt-16 desc_2 text-center">
-        Use ChatGPT with you're notes!
+        Chat with ChatGPT & You're Notes
       </p>
       <div className="mt-16">
-        <p className="desc text-center">Enabling users to use their notes as a knowledge base for AI models. Support for digital notes from apps such as
-        <span className="purple_gradient"> Obsidian</span>.
+        <p className="desc text-center">Enabling users to use 
+        <span className="green_gradient"> ChatGPT</span> with their notes to get better insights. Support for digital note taking software such as 
+        <span className="green_gradient"> Obsidian</span>.
         </p>
         <div className="flex-row flex-center mt-28 gap-4">
-          <Link href="/about">
-            <button className="black_btn_same px-10">Usage</button>
-          </Link>
-          <Link href="/login">
-            <button className="outline_btn_same px-10">Chat</button>
-          </Link>
+          <button className="black_btn_same px-5 md:pl-10 xl:pl-12">Login</button>
+          <button className="outline_btn_same">Chat</button>
         </div>
       </div>
-      <div className="flex mb-32 mt-16 gap-10 md:gap-24 flex-1 md:flex-row flex-col mx-auto">
+      <div className="flex mb-32 mt-24 gap-10 md:gap-24 flex-1 md:flex-row flex-col mx-auto">
         <AnimatedNumber 
           n={1}
           text="Years in Business"
@@ -49,9 +44,13 @@ const Home = () => {
         >
         </AnimatedNumber>
       </div>
+      {
+        // TODO: Add stuff about tutorial and using the toolchain
+      }
     </section>
   )
 }
+
 
 
 export default Home

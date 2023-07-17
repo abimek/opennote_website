@@ -1,3 +1,4 @@
+'use client'
 import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
@@ -15,7 +16,6 @@ const RootLayout = ({children}) => {
                 <div className="gradient"/>
             </div>
             <main className="app">
-                <Nav />
                 {children}
                 <Footer />
             </main>
