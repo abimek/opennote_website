@@ -57,7 +57,7 @@ const Register = () => {
     }
 
     return (
-        <section className="">
+        <section className="app">
             {user 
             ? router.push("/chat")
             : <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">

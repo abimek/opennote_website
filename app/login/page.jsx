@@ -49,7 +49,7 @@ const Login = () => {
     }
 
     return (
-        <section className="">
+        <section className="app">
                 { user
                 ? router.push('/chat')
                 : <div>

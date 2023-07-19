@@ -3,11 +3,8 @@ import AnimatedNumber from '@components/AnimatedNumber';
 import Link from 'next/link';
 
 const Home = () => {
-
-
-
   return (
-    <section className="w-full flex-center flex-col mt-16">
+    <section className="app w-full flex-center flex-col mt-16">
       <h1 className="head_text text-center max-w-7xl">
         <span className="orange_gradient text-center">Open Note AI</span>
       </h1>
@@ -19,7 +16,7 @@ const Home = () => {
         <span className="purple_gradient"> Obsidian</span>.
         </p>
         <div className="flex-row flex-center mt-28 gap-4">
-          <Link href="/about">
+          <Link href="/login">
             <button className="black_btn_same px-10">Usage</button>
           </Link>
           <Link href="/login">
