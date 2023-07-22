@@ -42,7 +42,7 @@ const themes = {
 };
 
 const Sidebard = () => {
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
 
     const toggleCollapsed = () => {
@@ -85,7 +85,7 @@ const Sidebard = () => {
     };
 
     return (
-        <div className="w-full flex flex-row h-full min-h-screen">
+        <div className="flex flex-row h-full min-h-screen">
             <Sidebar
                 collapsed={isCollapsed}
                 backgroundColor="#282b30"

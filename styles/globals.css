@@ -77,6 +77,10 @@
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
+.SettingsOverlay {
+  @apply w-[50%] h-[50%] 
+}
+
 .black_btn_same {
   @apply min-w-[15%] text-center text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
 }
@@ -100,6 +104,10 @@
 
 .head_text {
   @apply text-5xl font-extrabold leading-[1.15] text-black sm:text-5xl md:text-6xl lg:text-7xl lg:text-8xl;
+}
+
+.head_text_6 {
+  @apply text-lg font-bold leading-[1.15] text-black;
 }
 
 .head_text_3 {
