@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { createEmptyUser, getUser, validateCredentials, sendMessage } from "@api/api";
 import SettingsModal from "@components/SettingsModal";
 import Sidebard from "@components/Sidebard";
