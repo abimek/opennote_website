@@ -139,7 +139,6 @@ const Home = () => {
                 width="720"
                 height="400"
                 src="https://player.vimeo.com/video/854432482?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&quality=720p&loop=1&autoplay=1&autopause=0" 
-                frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 title="Creating A OpenNote Account">
               </iframe>
@@ -160,7 +159,6 @@ const Home = () => {
                 width="720"
                 height="400"
                 src="https://player.vimeo.com/video/854443873?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&quality=720p&loop=1&autoplay=1&autopause=0" 
-                frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 title="Creating an OpenAI Account">
               </iframe>
@@ -181,7 +179,6 @@ const Home = () => {
                 width="720"
                 height="400"
                 src="https://player.vimeo.com/video/854500998?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&quality=720p&loop=1&autoplay=1&autopause=0" 
-                frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 title="Creating an OpenAI Account">
               </iframe>
@@ -202,7 +199,6 @@ const Home = () => {
                 width="720"
                 height="400"
                 src="https://player.vimeo.com/video/854547662?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&quality=720p&loop=1&autoplay=1&autopause=0" 
-                frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 title="Creating an OpenAI Account">
               </iframe>

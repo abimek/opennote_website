@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import {Sidebar, Menu, MenuItem, MenuItemStyles, menuClasses} from "react-pro-sidebar";
 import Link from "next/link";
 import { useState } from "react";
@@ -92,6 +92,7 @@ const Sidebard = ({toggleSettings, closeSettings}) => {
 
     return (
         <div className="flex flex-row h-full min-h-screen">
+            {typeof window !== "undefined" &&
             <Sidebar
                 collapsed={isCollapsed}
                 backgroundColor="#282b30"
@@ -152,6 +153,7 @@ const Sidebard = ({toggleSettings, closeSettings}) => {
                     </div>
                 </div>
             </Sidebar>
+            }
             <div className="static p-3">
                 <button onClick={toggleCollapsed} className="p-4 outline_btn_toogle">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>                    
