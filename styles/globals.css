@@ -87,11 +87,15 @@
 
 
 .outline_btn_same {
-  @apply border min-w-[15%] text-center border-green-700 text-black bg-transparent shadow-lg shadow-green-700/50 hover:bg-black/90 hover:text-white focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
+  @apply border min-w-[15%] text-center border-amber-700 text-black bg-transparent shadow-lg shadow-amber-700/50 hover:bg-black/90 hover:text-white focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
+}
+
+.outline_btn_pill {
+  @apply border min-w-[15%] text-center hover:-translate-y-1 hover:scale-110 border-amber-300 text-black bg-transparent shadow-lg shadow-amber-700/30 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-3xl text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
 }
 
 .outline_btn_toogle {
-  @apply border min-w-[15%] text-center border-gray-700 text-black bg-transparent shadow-lg shadow-green-700/50 hover:bg-black/90 hover:text-white focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
+  @apply border min-w-[15%] text-center border-gray-700 text-black bg-transparent shadow-lg shadow-amber-700/50 hover:bg-black/90 hover:text-white focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2;
 }
 
 .black_btn {
@@ -119,6 +123,16 @@
   @apply text-3xl font-extrabold leading-[1.15] text-black lg:text-3xl;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .purple_gradient {
   @apply bg-gradient-to-r from-purple-800 via-purple-500 to-purple-400 bg-clip-text text-transparent;
 }
@@ -141,11 +155,15 @@
 }
 
 .desc_4 {
-  @apply text-center mt-12 font-satoshi text-xl text-gray-600 sm:text-xl max-w-3xl;
+  @apply mt-12 font-satoshi text-xl text-gray-600 sm:text-xl max-w-5xl;
 }
 
 .desc_5 {
   @apply  mt-12 font-satoshi text-xl text-gray-600 sm:text-xl max-w-xl;
+}
+
+.desc_6 {
+  @apply  font-satoshi text-white max-w-xl;
 }
 
 .desc_3 {

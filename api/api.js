@@ -1,6 +1,6 @@
 async function default_post(data, path, json, statuscode = false) {
     try {
-        var endpoint = "http://localhost:3323/" + path
+        var endpoint = "https://opennote-production.up.railway.app/" + path
         const response = await fetch(endpoint, {
             method: "POST",
             mode: "cors",
@@ -11,11 +11,14 @@ async function default_post(data, path, json, statuscode = false) {
             redirect: "follow",
             body: JSON.stringify(data)
         });
+        if(statuscode && json){
+            return [response.status, response];
+        }
         if(statuscode){
             return response.status;
         }
         if(json) {
-            return response.json();
+            return await response.json();
         }
 
     } catch {
@@ -23,8 +26,14 @@ async function default_post(data, path, json, statuscode = false) {
     }
 }
 
-export async function message(uid, message) {
-    return await default_post({uid: uid, message: message}, "message", true);
+export async function sendMessage(uid, message) {
+    let resp = await default_post({uid: uid, chat: message}, "message", true, true);
+    if(resp[0] == 200){
+        resp[1] = await resp[1].text()
+    }else{
+        resp[1] = await resp[1].json()
+    }
+    return resp;
 }
 
 export async function createEmptyUser(uids) {
