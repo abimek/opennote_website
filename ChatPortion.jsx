@@ -6,7 +6,7 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import gfm from 'remark-gfm'
 const ChatPortion = ({chatType, message, photoUrl}) => {
   return (
-    <div className="ml-20 w-[80%] flex flex-row">
+    <div className="md:ml-20 w-[80%] flex flex-row">
         {photoUrl != null &&
             <Image
                 className="h-full pt-4 mr-8"

@@ -96,7 +96,7 @@ const Sidebard = ({toggleSettings, closeSettings}) => {
             <Sidebar
                 collapsed={isCollapsed}
                 backgroundColor="#282b30"
-                breakPoint="md"
+                breakPoint="xs"
                 image="https://user-images.githubusercontent.com/25878302/144499035-2911184c-76d3-4611-86e7-bc4e8ff84ff5.jpg"
                 rootStyles={{
                     color: themes.light.sidebar.color,

@@ -132,13 +132,9 @@ const SettingsModal = ({appUser, setUserCallable, closeCallable}) => {
                     </div>
                 </div>
                 }
-            </div>
-            <div className="flex items-end mt-7">
-                <div className="ml-[83%]">
-                    <button onClick={validateCreds} className="black_btn_same px-10 self-end">
-                        Update
-                    </button>
-                </div>
+                <button onClick={validateCreds} className="black_btn_same px-10 self-end ml-auto mt-5">
+                    Update
+                </button>
             </div>
         </div>
 

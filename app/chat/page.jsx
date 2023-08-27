@@ -216,14 +216,14 @@ const Chat = () => {
                             <div className="w-[80%]" ref={bottomEl}/>
                         </div>
                         <div>
-                            <label class="inline-flex right-0 mr-[50%] flex flex-center fixed items-center bottom-0 mb-24 mt-auto cursor-pointer">
+                            <label class="inline-flex right-0 mr-[50%] flex flex-center fixed items-center bottom-0 md:mb-24 mb-16 mt-auto cursor-pointer">
                                 <input type="checkbox" onClick={toggleNotes} value="true" class="sr-only peer"/>
                                     <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                                 <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Use Notes</span>
                             </label>
                         </div>
-                        <div className="flex flex-col fixed bottom-0 items-center mr-20 mb-10 w-[70vw] ">
-                            <div className="relative w-[50%] mt-auto align-bottom ml-20 shadow-lg">
+                        <div className="flex flex-col fixed bottom-0 items-center md:mr-20 md:mb-10 mb-4 w-[70vw] ">
+                            <div className="relative w-full md:w-[50%] mt-auto align-bottom md:ml-20 md:mr-0 mr-16 shadow-lg">
                                 <input value={input} onKeyPress={e => handleSubmit(e)} onChange={changeInput} id="search-dropdown" className="block p-2.5 z-20 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-l-gray-100 border-l-2 border border-gray-300 " placeholder="Send a Chat"/>
                                 {waiting || input == "" &&
                                     <button type="submit" onClick={transmitMessage} className="absolute top-0 right-0 p-2.5 h-full text-sm font-medium text-white bg-gray-700 rounded-r-lg border border-gray-700 hover:bg-gray-800">
@@ -254,7 +254,7 @@ const formStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.6)'
     },
     content: {
-        width: "50%",
+        width: "80%",
         height: "62%",
         top: '50%',
         left: '50%',
